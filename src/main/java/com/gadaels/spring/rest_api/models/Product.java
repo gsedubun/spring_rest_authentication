@@ -1,13 +1,18 @@
 package com.gadaels.spring.rest_api.models;
 
+import javax.annotation.Generated;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class Product{
-    String _productName;
-    int _productId;
-    public Product(int productId, String productName) {
-        this._productId=productId;
-        this._productName=productName;
-    }
+    private String _productName;
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY )
+    private int _productId;
 
     public Product(){
         
